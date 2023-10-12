@@ -10,6 +10,7 @@ export default class ObsidianFlashcard extends Plugin {
 	private cardsService: CardsService
 
 	async onload() {
+		
 		addIcon("flashcards", flashcardsIcon)
 
 		// TODO test when file did not insert flashcards, but one of them is in Anki already

@@ -244,8 +244,6 @@ export class Parser {
         }
       });
 
-      // Replace the highlight clozes in the line with Anki syntax
-      clozeText = clozeText.replace(this.regex.singleClozeHighlight, "{{c1::$2}}");
 
       if (clozeText === match[2]) {
         // If the clozeText is the same as the match it means that the curly clozes were all in math blocks

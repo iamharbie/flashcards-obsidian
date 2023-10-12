@@ -19,7 +19,6 @@ export class Regex {
   cardsSpacedStyle: RegExp;
   cardsClozeWholeLine: RegExp;
   singleClozeCurly: RegExp;
-  singleClozeHighlight: RegExp;
   clozeHighlight: RegExp;
 
   embedBlock: RegExp;
@@ -93,7 +92,6 @@ export class Regex {
     this.cardsClozeWholeLine = new RegExp(str, flags);
     
     this.singleClozeCurly = /((?:{)(?:(\d):?)?(.+?)(?:}))/g;
-    this.singleClozeHighlight = /((?:==)(.+?)(?:==))/g;
 
     // Matches any embedded block but the one with an used extension from the wikilinks
     this.embedBlock = /!\[\[(.*?)(?<!\.(?:png|jpg|jpeg|gif|bmp|svg|tiff|mp3|webm|wav|m4a|ogg|3gp|flac))\]\]/g;
